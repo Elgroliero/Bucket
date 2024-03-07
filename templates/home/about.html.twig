@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block pageTitle %}{{ parent() }}: A Propos de{% endblock %}
+
+{% block pageName %}A Propos de{% endblock %}
+
+{% block pageContent %}
+
+    <div class="row justify-content-center">
+        {% for item in creatorsData %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ item.picture }}" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{ item.lastname }} {{ item.firstname }} {% if item.firstname|lower == 'fabien' %}❤{% endif %}</h5>
+        <p class="card-text">{{ item.description }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ item.dateOfBirth|date('d/m/Y') }}</li>
+        <li class="list-group-item">{{ item.creatorOf }}</li>
+    </ul>
+</div>
+{#            <p> NOM : {% if item.firstname == "Fabien" %} {{ item.firstname }} ❤ {% else %} {{ item.firstname }} {% endif %} {{ item.lastname }}</p> #}
+{#        <p>DATE DE NAISSANCE : {{ item.dateOfBirth | date('d/m/Y') }}</p> #}
+{#        <p>CREATEUR DE : {{ item.creatorOf }}</p> #}
+{#        <p><img src="{{ item.picture }}" alt="logo" /></p> #}
+{#        <p>DESCRIPTION : {{ item.description }}</p> #}
+
+{% endfor %}
+
+{% endblock %}

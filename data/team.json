@@ -1,0 +1,27 @@
+[
+  {
+    "firstname": "Fabien",
+    "lastname": "Potencier",
+    "dateOfBirth": "1979-02-22",
+    "creatorOf": "Symfony",
+    "picture": "https://pbs.twimg.com/profile_images/1126770148092698625/nI58pL5O_200x200.png",
+    "description" : "Fabien Potencier est une figure emblématique de la communauté PHP et le fondateur de Symfony, l'un des frameworks PHP les plus populaires et les plus influents. Avec son expertise technique et sa vision novatrice, il a grandement contribué à façonner le paysage du développement web moderne. En tant que développeur passionné et entrepreneur avisé, Fabien Potencier a consacré sa carrière à promouvoir les meilleures pratiques de développement, la collaboration communautaire et l'innovation technologique. Son leadership et son dévouement envers la communauté open source ont fait de lui une figure respectée et admirée dans le monde du développement web. "
+  },
+
+  {
+    "firstname": "Taylor",
+    "lastname": "Otwell",
+    "dateOfBirth": "1982-10-10",
+    "creatorOf": "Laravel",
+    "picture": "https://www.amplay.ch/media/image/product/2977/sm/sonic-the-hedgehog-puzzle-sonic-250-teile.jpg",
+    "description" : "Sonic, le hérisson bleu le plus célèbre de l'univers des jeux vidéo, est le protagoniste central de la franchise éponyme créée par Sega. Doté d'une personnalité espiègle et d'une vitesse incroyable, Sonic est devenu une icône emblématique de l'industrie du jeu vidéo depuis sa première apparition en 1991. Son objectif principal est de sauver le monde du maléfique Dr Robotnik, également connu sous le nom d'Eggman, en traversant des niveaux remplis d'obstacles, de loopings et de dangers. Avec ses amis fidèles, comme Tails et Knuckles, Sonic a captivé des générations de joueurs avec son charisme, son dynamisme et son engagement à combattre l'injustice. À travers ses jeux, séries animées et adaptations cinématographiques, Sonic continue de faire vibrer les cœurs des fans du monde entier, restant toujours à la pointe de l'action et de l'aventure. "
+  },
+  {
+    "firstname": "Jordi",
+    "lastname": "Boggiano",
+    "dateOfBirth": "1986-01-30",
+    "creatorOf": "Composer",
+    "picture": "https://avatars.githubusercontent.com/u/183678?v=4",
+    "description" : "Jordi Boggiano est un développeur de logiciels suisse largement reconnu pour ses contributions majeures à la communauté open source. Il est surtout connu pour être le co-créateur et mainteneur principal de Composer, l'un des gestionnaires de dépendances les plus utilisés dans l'écosystème PHP. Avec son expertise technique exceptionnelle et son engagement envers l'amélioration des outils de développement, Jordi a joué un rôle crucial dans la simplification du processus de gestion des dépendances pour les développeurs PHP du monde entier. En tant que membre influent de la communauté PHP, il continue d'inspirer et d'apporter des innovations significatives à l'industrie du développement logiciel. Sa passion pour le code ouvert et sa volonté de partager ses connaissances font de lui une figure respectée et admirée dans le monde du développement informatique. "
+  }
+]

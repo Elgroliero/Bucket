@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block pageTitle %}{{ parent() }}: Wish List{% endblock %}
+
+{% block pageName %}Wish List{% endblock %}
+
+
+    {% block pageContent %}
+        Voici votre liste de souhaits avant de mourir :
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Catégorie</th>
+                <th scope="col">Date de création</th>
+                <th scope="col">Voir</th>
+                <th scope="col">Editer</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for wish in wishes %}
+                <tr>
+                    <th scope="row">{{ wish.id }}</th>
+                    <td>{{ wish.title }}</td>
+                    <td>        {% if wish.category is not empty %}
+                            <span>{{ wish.category.name }}</span>
+                        {% else %}
+                            Aucune
+                        {% endif %}</td>
+                    <td>{{ wish.dateCreated|date('d/m/Y') }}</td>
+
+                    <td><a href="{{ url('wish_details', {'id': wish.id}) }}" class="mt-3"><button type="submit" class="btn btn-info">Voir</button></a></td>
+                    <td><a href="{{ url('wish_update', {'id': wish.id}) }}" class="mt-3"><button type="submit" class="btn btn-primary">Editer</button></a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        {% set nbPages = (total / maxPerPage)|round %}
+        <nav>
+            <ul class="pagination justify-content-center">
+                {% for i in 1..nbPages %}
+                    <li class="page-item"><a class="page-link" href="{{ url('wish_list', {'p': i}) }}">{{ i }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+    {% endblock %}
+
+
+
