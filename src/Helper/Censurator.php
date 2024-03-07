@@ -2,19 +2,28 @@
 
 namespace App\Helper;
 
+use phpDocumentor\Reflection\Types\Self_;
+
 class Censurator
 {
-    private $motcensure = ['batard', 'connard', 'fripon'];
+    const MOT_CENSURE = ['batard', 'connard', 'fripon'];
 
     public function __construct()
     {
 
     }
 
+    //fonction pour censurer un mot
     public function purify(string $text): string
     {
-        foreach ($this->motcensure as $censure) {
-            $text = str_ireplace($censure, '*', $text);
+        $file = '../data/forbidden_words.txt';
+
+        $forbiddenWords = file($file);
+
+        foreach ($forbiddenWords as $censure) {
+            $censure = str_ireplace(PHP_EOL, '', $censure);
+            $remplacement = str_repeat('*', strlen($censure));
+            $text = str_ireplace($censure, $remplacement, $text);
         }
         return $text;
     }

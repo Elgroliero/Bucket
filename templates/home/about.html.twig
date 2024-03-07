@@ -8,16 +8,17 @@
 
     <div class="row justify-content-center">
         {% for item in creatorsData %}
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18em;">
+    <h5 class="card-title"> {{ item.firstname }} {% if item.firstname|lower == 'fabien' %}❤{% endif %} {{ item.lastname }}</h5>
     <img class="card-img-top" src="{{ item.picture }}" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">{{ item.lastname }} {{ item.firstname }} {% if item.firstname|lower == 'fabien' %}❤{% endif %}</h5>
-        <p class="card-text">{{ item.description }}</p>
-    </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">{{ item.dateOfBirth|date('d/m/Y') }}</li>
         <li class="list-group-item">{{ item.creatorOf }}</li>
     </ul>
+    <div class="card-body">
+        <p class="card-text">{{ item.description }}</p>
+    </div>
+
 </div>
 {#            <p> NOM : {% if item.firstname == "Fabien" %} {{ item.firstname }} ❤ {% else %} {{ item.firstname }} {% endif %} {{ item.lastname }}</p> #}
 {#        <p>DATE DE NAISSANCE : {{ item.dateOfBirth | date('d/m/Y') }}</p> #}

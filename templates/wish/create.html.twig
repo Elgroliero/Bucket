@@ -6,57 +6,71 @@
 
     {% block pageContent %}
 
-    <div class="container">
-        <h1 class="mt-5">Crée un nouveau Wish !</h1>
-        <div class="row">
-            <div class="col-md-6">
-            </div>
-            {{ form_start(wishForm) }}
-            <div class="mb-3">
-                {{ form_label(wishForm.title, 'Titre:', {'label_attr': {'class': 'form-label'}}) }}
-                {{ form_widget(wishForm.title, {'attr': {'class': 'form-control'}}) }}
-                {% set errors = form_errors(wishForm.title) %}
-                {% if errors %}
-                    <div class="text-danger">
-                        {{ errors|striptags }}
-                    </div>
-                {% endif %}
+<div class="container">
+    <h1 class="mt-5">Crée un nouveau Wish !</h1>
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        {{ form_start(wishForm) }}
+        <div class="mb-3">
+            {{ form_label(wishForm.title, 'Titre:', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(wishForm.title, {'attr': {'class': 'form-control'}}) }}
+            {% set errors = form_errors(wishForm.title) %}
+            {% if errors %}
+                <div class="text-danger">
+                    {{ errors|striptags }}
+                </div>
+            {% endif %}
 
-            </div>
-            <div class="mb-3">
-                {{ form_label(wishForm.description, 'Description:', {'label_attr': {'class': 'form-label'}}) }}
-                {{ form_widget(wishForm.description, {'attr': {'class': 'form-control'}}) }}
-                {% set errors = form_errors(wishForm.description) %}
-                {% if errors %}
-                    <div class="text-danger">
-                        {{ errors|striptags }}
-                    </div>
-                {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form_label(wishForm.description, 'Description:', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(wishForm.description, {'attr': {'class': 'form-control'}}) }}
+            {% set errors = form_errors(wishForm.description) %}
+            {% if errors %}
+                <div class="text-danger">
+                    {{ errors|striptags }}
+                </div>
+            {% endif %}
 
-            </div>
-            <div class="mb-3">
-                {{ form_label(wishForm.category, 'Category:', {'label_attr': {'class': 'form-label'}}) }}
-                {{ form_widget(wishForm.category, {'attr': {'class': 'form-control'}}) }}
-                {% set errors = form_errors(wishForm.category) %}
-                {% if errors %}
-                    <div class="text-danger">
-                        {{ errors|striptags |raw }}
-                    </div>
-                {% endif %}
-            </div>
-            <div class="mb-3">
-                {{ form_label(wishForm.author, 'Auteur:', {'label_attr': {'class': 'form-label'}}) }}
-                {{ form_widget(wishForm.author, {'attr': {'class': 'form-control'}}) }}
-                {% set errors = form_errors(wishForm.author) %}
-                {% if errors %}
-                    <div class="text-danger">
-                        {{ errors|striptags |raw }}
-                    </div>
-                {% endif %}
-            </div>
+        </div>
+        <div class="mb-3">
+            {{ form_label(wishForm.category, 'Category:', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(wishForm.category, {'attr': {'class': 'form-control'}}) }}
+            {% set errors = form_errors(wishForm.category) %}
+            {% if errors %}
+                <div class="text-danger">
+                    {{ errors|striptags |raw }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form_label(wishForm.author, 'Auteur:', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(wishForm.author, {'attr': {'class': 'form-control'}}) }}
+            {% set errors = form_errors(wishForm.author) %}
+            {% if errors %}
+                <div class="text-danger">
+                    {{ errors|striptags |raw }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            {{ form_label(wishForm.picture_file, 'Image:', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(wishForm.picture_file, {'attr': {'class': 'form-control'}}) }}
+            {% set errors = form_errors(wishForm.picture_file) %}
+            {% if errors %}
+                <div class="text-danger">
+                    {{ errors|striptags }}
+                </div>
+            {% endif %}
+        </div>
+
+        <div>
             {{ form_row(wishForm.submit, {'label': 'Créer mon Wish', 'label_attr': {'class': 'btn btn-primary'}}) }}
-                            {{ form_end(wishForm) }}
+            {{ form_end(wishForm) }}
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
+
+
 
